@@ -1,3 +1,3 @@
-# pyHeat
+# DoorGuard
 
-PyHeat heating controller based on MicroPython.
+DoorGuard access control system.

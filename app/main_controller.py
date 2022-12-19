@@ -1,5 +1,5 @@
 from esp_micro.esp_micro_controller import EspMicroController
-from pyheat_device import PyHeatDevice
+from doorGuard_device import DoorGuardDevice
 
 
 class MainController(EspMicroController):
@@ -7,10 +7,10 @@ class MainController(EspMicroController):
         super().__init__()
 
     def createHomieDevice(self, settings):
-        return PyHeatDevice(settings)
+        return DoorGuardDevice(settings)
 
     def getDeviceName(self):
-        return 'pyHeat'
+        return 'doorGuard'
 
     def getDeviceID(self):
-        return 'pyHeat'
+        return 'doorGuard'
