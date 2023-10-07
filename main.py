@@ -2,6 +2,9 @@ import sys
 import time, machine, network, gc
 import os
 
+import micropython
+micropython.alloc_emergency_exception_buf(100)
+
 sys.path.append('/app')
 sys.path.append('/app/lib')
 

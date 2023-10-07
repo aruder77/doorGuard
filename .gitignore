@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-.lib/
+lib/
 config/
 lib64/
 parts/
@@ -130,3 +130,9 @@ dmypy.json
 .pyre/
 
 app/.version
+
+**/mqtt.dat
+**/tags.dat
+**/wifi.dat
+
+.DS_Store
