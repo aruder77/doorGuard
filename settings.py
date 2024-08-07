@@ -10,7 +10,8 @@ DEBUG = True
 
 # SSL connection to the broker. Some MicroPython implementations currently
 # have problems with receiving mqtt messages over ssl connections.
-# MQTT_SSL = False
+MQTT_PORT = 8883
+MQTT_SSL = True
 # MQTT_SSL_PARAMS = {}
 # MQTT_SSL_PARAMS = {"do_handshake": True}
 
