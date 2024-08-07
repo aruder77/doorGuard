@@ -38,6 +38,7 @@ class TagStoreNode(HomieNode):
             datatype=STRING,
             settable=True,
             pub_on_upd=True,
+            default=tagStore.getTags(),
             on_message=self.onSetTags
         )
         self.add_property(self.tagsProperty)

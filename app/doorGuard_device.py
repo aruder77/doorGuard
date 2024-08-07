@@ -15,10 +15,11 @@ class DoorGuardDevice(HomieDevice):
         self.doorControllerNode = DoorControllerNode()
         self.tagStore = TagStore()
         self.tagStoreNode = TagStoreNode(self.tagStore)
-        self.rfidReaderNode = RfidReaderNode(self.doorControllerNode)
+        self.rfidReaderNode = RfidReaderNode(self.doorControllerNode, self.tagStore)
 
         self.add_node(self.doorControllerNode)
         self.add_node(self.rfidReaderNode)
+        self.add_node(self.tagStoreNode)
 
         # DoorControllerNode
         # - doorState
