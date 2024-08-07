@@ -8,7 +8,7 @@ from tag_store import TagStore
 
 class RfidReaderNode(HomieNode):
 
-    def __init__(self, doorController: DoorControllerNode):
+    def __init__(self, doorController: DoorControllerNode, tagStore: TagStore):
         super().__init__(id="RfidReader", name="RfidReader", type="Controller")
 
         self.lastValidTagProperty = HomieProperty(
@@ -29,7 +29,7 @@ class RfidReaderNode(HomieNode):
         )
         self.add_property(self.lastInvalidTagProperty)              
 
-        self.tagStore = TagStore()
+        self.tagStore = tagStore
         self.reader = RfidReader()
         self.doorController = doorController
 
